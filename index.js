@@ -7,7 +7,7 @@ let dotenv = require("dotenv");
 dotenv.config();
 
 var transport = {
-  host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
+  host: "smtp.gmail.com",
   port: 587,
   auth: {
     user: process.env.USER_MAIL,
@@ -36,8 +36,8 @@ router.post("/send", (req, res, next) => {
 
   var mail = {
     from: name,
-    to: process.env.MI_MAIL, // Change to email address that you want to receive messages on
-    subject: "New Message from Contact Form",
+    to: process.env.MI_MAIL,
+    subject: "Nueva consulta desde web personal",
     text: content,
   };
 
